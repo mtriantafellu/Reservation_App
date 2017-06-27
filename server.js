@@ -15,9 +15,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-// Star Wars Characters (DATA)
+// Reservation (DATA)
 // =============================================================
-var characters = [{
+var reservation = [{
     routeName: "yoda",
     name: "Yoda",
     role: "Jedi Master",
@@ -42,7 +42,7 @@ var characters = [{
 
 // Basic route that sends the user first to the AJAX Page
 app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "view.html"));
+    res.sendFile(path.join(__dirname, "home.html"));
 });
 
 app.get("/add", function(req, res) {
@@ -50,30 +50,30 @@ app.get("/add", function(req, res) {
 });
 
 // Search for Specific Character (or all characters) - provides JSON
-app.get("/api/:characters?", function(req, res) {
-    var chosen = req.params.characters;
+app.get("/api/:reservation?", function(req, res) {
+    var chosen = req.params.reservation;
 
     if (chosen) {
         console.log(chosen);
 
-        for (var i = 0; i < characters.length; i++) {
-            if (chosen === characters[i].routeName) {
-                return res.json(characters[i]);
+        for (var i = 0; i < reservation.length; i++) {
+            if (chosen === reservation[i].routeName) {
+                return res.json(reservation[i]);
             }
         }
         return res.json(false);
     }
-    return res.json(characters);
+    return res.json(reservation);
 });
 
-// Create New Characters - takes in JSON input
+// Create New Reservation - takes in JSON input
 app.post("/api/new", function(req, res) {
-    var newcharacter = req.body;
-    newcharacter.routeName = newcharacter.name.replace(/\s+/g, "").toLowerCase();
+    var newreservation = req.body;
+    newreservation.routeName = newreservation.name.replace(/\s+/g, "").toLowerCase();
 
-    console.log(newcharacter);
+    console.log(newreservation);
 
-    characters.push(newcharacter);
+    reservation.push(newreservation);
 
     res.json(newcharacter);
 });
