@@ -18,23 +18,23 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 // Reservation (DATA)
 // =============================================================
 var reservation = [{
-    routeName: "yoda",
-    name: "Yoda",
+    routeName: "first_name",
+    name: "Bob",
     role: "Jedi Master",
-    age: 900,
-    forcePoints: 2000
+    phoneNumber: 407-555-5555,
+    email: 2000
 }, {
-    routeName: "darthmaul",
+    routeName: "second_name",
     name: "Darth Maul",
     role: "Sith Lord",
-    age: 200,
-    forcePoints: 1200
+    phoneNumber: 407-566-6666,
+    email: 1200
 }, {
-    routeName: "obiwankenobi",
+    routeName: "third_name",
     name: "Obi Wan Kenobi",
     role: "Jedi Master",
-    age: 55,
-    forcePoints: 1350
+    phoneNumber: 407-577-7777,
+    email: 1350
 }];
 
 // Routes
