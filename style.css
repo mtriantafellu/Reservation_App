@@ -1,0 +1,14 @@
+#addbutton{
+	margin:20px;
+	float:left;
+}
+#viewtablebtn{
+	margin:20px 20px 20px 255px;
+	float:left;
+}
+#divline{
+	margin:30px;
+	width:95%;
+	height:3px;
+	background-color: #d3d3d3;
+}
