@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script
+  	src="https://code.jquery.com/jquery-3.2.1.min.js"
+  	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  	crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="front.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    th{text-align:center;}
+    td{text-align:center;} 
+  </style>
+
+    <title>Restaurant Tables</title>
+
+  </head>
+  <body>
+  		<div class = container>
+  			<div class = row>
+	  			<div class="jumbotron">
+				  <h1 id = "jumboheader" class="text-center">Hot Restaurant</h1>
+				  <div id = divline></div>
+				  <h3 class ="text-center">We only have 5 tables left. Make a reservation now</h3>
+				  <div class="row">
+				  <a class="btn btn-primary btn-lg" href = "tables.html" id = "viewtablebtn" role="button">View Tables</a>
+				  <a class="btn btn-primary btn-lg" id = "addbutton" href ="add.html" role="button">Make Reservation</a>
+				  </div>
+				  <div class = "row">
+            <div class = "col-s-12">
+              <h4>Current Reservations</h4>
+              <br><br>
+              <table class = "table table-bordered">
+                <tr>
+                  <th id = "name">Name</th>
+                  <th id = "phone">Phone Number</th>
+                  <th id = "email">Email</th>
+                  <th id = "unique-id">Unique ID</th>
+                </tr>
+                <tr><!--Customer's information listed here. 5 rows for five custmers-->
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class = "row">
+            <div class = "col-s-12">
+              <h4>Waiting List</h4>
+              <br><br>
+              <table class = "table table-bordered">
+                <tr>
+                  <th>Name</th>
+                  <th>Phone Number</th>
+                  <th>Email</th>
+                  <th>Unique ID</th>
+                </tr>
+                <tr><!--Customer's information listed here. Number of customers is dependent on number of customers who made reservations after first 5.-->
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+    	
+			<div class = row>
+        <button type = "reset" id = "clear-all">Clear Table</button><!--Why does the example even have this feature? Shouldn't we the admins have that power over the tables and not the user clients?-->
+  			<a href= "table.js">API TABLE LINK</a>
+  			<a href="waitlist.js">API WAIT LINK</a>
+			</div>
+			
+		</div>
+  </body>
+</html>
