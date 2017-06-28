@@ -1,8 +1,8 @@
 $("#addReservationBtn").on("click", function() {
-    var userName = $("#name").val().trim();
-    var userPhone = $("#phone").val().trim();
-    var userEmail = $("#email").val().trim();
-    var uniqueID = $("uniqueID").val().trim();
+    var userName = $("#addName").val().trim();
+    var userPhone = $("#addPhone").val().trim();
+    var userEmail = $("#addEmail").val().trim();
+    var uniqueID = $("#uniqueID").val().trim();
 
     userName = userName.replace(/\s+/g, "").toLowerCase();
 
